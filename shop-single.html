@@ -44,9 +44,8 @@
     input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:999px;background:linear-gradient(135deg,#22d3ee,#f472b6);cursor:pointer;border:2px solid #0b0d12;}
     input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:999px;background:linear-gradient(135deg,#22d3ee,#f472b6);cursor:pointer;border:2px solid #0b0d12;}
 
-    .braid-strand{animation:braidFlow 7s linear infinite;}
-    @keyframes braidFlow{0%{stroke-dashoffset:0;}100%{stroke-dashoffset:-120;}}
-    @media (prefers-reduced-motion: reduce){.braid-strand{animation:none;}}
+    /* braid strands render as solid phase-shifted curves (see braidPath()) -
+       no dash-flow animation, since a dash pattern would break the solid-cord look. */
   </style>
 </head>
 <body class="bg-ink" x-data="cableBuilder()">
@@ -66,12 +65,14 @@
 
   <header class="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-line/60">
     <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 17c3-7 7-7 10 0s7 7 10 0 7-7 8-4" stroke="url(#navGrad)" stroke-width="3" stroke-linecap="round"/>
-          <defs><linearGradient id="navGrad" x1="0" y1="0" x2="34" y2="0"><stop stop-color="#22d3ee"/><stop offset="0.5" stop-color="#f472b6"/><stop offset="1" stop-color="#fbbf24"/></linearGradient></defs>
-        </svg>
-        <span class="font-heading font-bold text-xl text-white">Custom<span class="grad-text">Cable</span></span>
+      <a href="index.html" class="flex items-center gap-2.5">
+        <span class="w-9 h-9 rounded-xl bg-panel2 border border-line flex items-center justify-center shrink-0">
+          <svg width="19" height="19" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 10c2.2-5.5 4.4-5.5 6.6 0s4.4 5.5 6.6 0" stroke="#22d3ee" stroke-width="2.3" stroke-linecap="round"/>
+            <path d="M1 10c2.2 5.5 4.4 5.5 6.6 0s4.4-5.5 6.6 0" stroke="#f472b6" stroke-width="2.3" stroke-linecap="round" opacity="0.85"/>
+          </svg>
+        </span>
+        <span class="font-heading font-bold text-xl text-white">Custom<span class="text-cyan">Cable</span></span>
       </a>
       <div class="hidden lg:flex items-center gap-10 font-medium text-gray-300">
         <a href="index.html" class="hover:text-white transition-colors">Главная</a>
@@ -95,32 +96,49 @@
       <div class="bg-panel border border-line rounded-3xl p-8 mt-6">
         <svg viewBox="0 0 400 160" class="w-full">
           <!-- connector left -->
-          <g>
-            <rect x="4" y="68" width="34" height="24" rx="6" fill="#181c25" stroke="#3a4155" stroke-width="2"/>
+          <g transform="translate(2,50)">
+            <use :href="'#conn-' + type" href="#conn-usbc"/>
           </g>
-          <!-- braid strands -->
-          <path class="braid-strand" x-show="colors.length > 0"
-                d="M38 80 C 110 40, 150 120, 210 80 S 320 40, 362 80"
-                style="transform: translateY(-14px)"
-                fill="none" stroke-width="7" stroke-linecap="round"
-                stroke-dasharray="16 10"
-                :stroke="colors[0]"/>
-          <path class="braid-strand" x-show="colors.length > 1"
-                d="M38 80 C 110 40, 150 120, 210 80 S 320 40, 362 80"
-                style="transform: translateY(0px)"
-                fill="none" stroke-width="7" stroke-linecap="round"
-                stroke-dasharray="16 10"
-                :stroke="colors[1]"/>
-          <path class="braid-strand" x-show="colors.length > 2"
-                d="M38 80 C 110 40, 150 120, 210 80 S 320 40, 362 80"
-                style="transform: translateY(14px)"
-                fill="none" stroke-width="7" stroke-linecap="round"
-                stroke-dasharray="16 10"
-                :stroke="colors[2]"/>
-          <!-- connector right -->
-          <g>
-            <rect x="362" y="68" width="34" height="24" rx="6" fill="#181c25" stroke="#3a4155" stroke-width="2"/>
+          <!-- braided strands: phase-shifted so they actually cross, not just run in parallel -->
+          <path class="braid-strand" x-show="colors.length > 0" :d="braidPath(0)"
+                fill="none" stroke-width="7" stroke-linecap="round" :stroke="colors[0]"/>
+          <path class="braid-strand" x-show="colors.length > 1" :d="braidPath(1)"
+                fill="none" stroke-width="7" stroke-linecap="round" :stroke="colors[1]"/>
+          <path class="braid-strand" x-show="colors.length > 2" :d="braidPath(2)"
+                fill="none" stroke-width="7" stroke-linecap="round" :stroke="colors[2]"/>
+          <!-- connector right (mirrored) -->
+          <g transform="translate(398,50) scale(-1,1)">
+            <use :href="'#conn-' + type" href="#conn-usbc"/>
           </g>
+
+          <!-- Connector symbol defs: generic schematic plug icons, not any brand's logo -->
+          <defs>
+            <g id="conn-audio">
+              <rect x="0" y="6" width="13" height="40" rx="4" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
+              <line x1="0" y1="17" x2="13" y2="17" stroke="#5b6372" stroke-width="2.5"/>
+              <line x1="0" y1="30" x2="13" y2="30" stroke="#5b6372" stroke-width="2.5"/>
+              <text x="6.5" y="62" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif">3.5</text>
+            </g>
+            <g id="conn-usbc">
+              <rect x="0" y="12" width="32" height="28" rx="9" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
+              <text x="16" y="62" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif">USB‑C</text>
+            </g>
+            <g id="conn-lightning">
+              <rect x="0" y="16" width="30" height="20" rx="4" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
+              <path d="M19 3 L10 22 L17 22 L9 40" fill="none" stroke="#5b6372" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <text x="15" y="62" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif">Lightning</text>
+            </g>
+            <g id="conn-network">
+              <rect x="0" y="10" width="34" height="26" rx="2" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
+              <rect x="11" y="2" width="12" height="9" rx="1" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
+              <line x1="5" y1="17" x2="5" y2="29" stroke="#5b6372" stroke-width="2"/>
+              <line x1="11" y1="17" x2="11" y2="29" stroke="#5b6372" stroke-width="2"/>
+              <line x1="17" y1="17" x2="17" y2="29" stroke="#5b6372" stroke-width="2"/>
+              <line x1="23" y1="17" x2="23" y2="29" stroke="#5b6372" stroke-width="2"/>
+              <line x1="29" y1="17" x2="29" y2="29" stroke="#5b6372" stroke-width="2"/>
+              <text x="17" y="62" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif">RJ45</text>
+            </g>
+          </defs>
         </svg>
 
         <div class="grid grid-cols-3 gap-3 mt-6 text-center text-sm">
@@ -193,7 +211,7 @@
           <span class="text-gray-400">Итого</span>
           <span class="font-heading font-bold text-2xl text-white" x-text="price + ' ₴'"></span>
         </div>
-        <a :href="orderLink" class="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan via-magenta to-amber text-ink font-bold px-6 py-3.5 rounded-full hover:opacity-90 transition-opacity">
+        <a :href="orderLink" class="w-full inline-flex items-center justify-center gap-2 bg-cyan text-ink font-bold px-6 py-3.5 rounded-full hover:bg-white transition-colors">
           Оформить заказ <i class="fa fa-paper-plane text-sm"></i>
         </a>
         <p class="text-gray-500 text-xs mt-3 text-center">Кнопка откроет письмо с готовой конфигурацией — отправите нам, и мы подтвердим заказ.</p>
@@ -230,6 +248,23 @@
           } else if (this.colors.length < 3) {
             this.colors = [...this.colors, c];
           }
+        },
+
+        // Builds a sine-wave path for strand `i`, phase-shifted so that with
+        // 2-3 colors the strands actually cross each other (a braid/twist),
+        // instead of just running alongside one another in parallel.
+        braidPath(i) {
+          const x0 = 40, x1 = 360, midY = 80, amp = 20, periods = 4;
+          const n = Math.max(this.colors.length, 1);
+          const phase = i * (2 * Math.PI / n);
+          let d = '';
+          for (let k = 0; k <= 60; k++) {
+            const t = k / 60;
+            const x = x0 + t * (x1 - x0);
+            const y = midY + amp * Math.sin(t * periods * 2 * Math.PI + phase);
+            d += (k === 0 ? 'M ' : 'L ') + x.toFixed(1) + ' ' + y.toFixed(1) + ' ';
+          }
+          return d;
         },
 
         get typeLabel() {

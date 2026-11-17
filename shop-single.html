@@ -106,27 +106,27 @@
                 fill="none" stroke-width="7" stroke-linecap="round" :stroke="colors[1]"/>
           <path class="braid-strand" x-show="colors.length > 2" :d="braidPath(2)"
                 fill="none" stroke-width="7" stroke-linecap="round" :stroke="colors[2]"/>
-          <!-- connector right (mirrored) -->
+          <!-- connector right (mirrored shape only - labels are drawn separately, unmirrored) -->
           <g transform="translate(398,50) scale(-1,1)">
             <use :href="'#conn-' + type" href="#conn-usbc"/>
           </g>
+          <!-- connector labels, kept upright on both sides -->
+          <text x="18" y="112" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif" x-text="typeLabel"></text>
+          <text x="382" y="112" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif" x-text="typeLabel"></text>
 
-          <!-- Connector symbol defs: generic schematic plug icons, not any brand's logo -->
+          <!-- Connector symbol defs: generic schematic plug icons, not any brand's logo (shape only, no text - labels are drawn separately so they stay upright when mirrored) -->
           <defs>
             <g id="conn-audio">
               <rect x="0" y="6" width="13" height="40" rx="4" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
               <line x1="0" y1="17" x2="13" y2="17" stroke="#5b6372" stroke-width="2.5"/>
               <line x1="0" y1="30" x2="13" y2="30" stroke="#5b6372" stroke-width="2.5"/>
-              <text x="6.5" y="62" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif">3.5</text>
             </g>
             <g id="conn-usbc">
               <rect x="0" y="12" width="32" height="28" rx="9" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
-              <text x="16" y="62" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif">USB‑C</text>
             </g>
             <g id="conn-lightning">
               <rect x="0" y="16" width="30" height="20" rx="4" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
               <path d="M19 3 L10 22 L17 22 L9 40" fill="none" stroke="#5b6372" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <text x="15" y="62" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif">Lightning</text>
             </g>
             <g id="conn-network">
               <rect x="0" y="10" width="34" height="26" rx="2" fill="#181c25" stroke="#5b6372" stroke-width="2.5"/>
@@ -136,7 +136,6 @@
               <line x1="17" y1="17" x2="17" y2="29" stroke="#5b6372" stroke-width="2"/>
               <line x1="23" y1="17" x2="23" y2="29" stroke="#5b6372" stroke-width="2"/>
               <line x1="29" y1="17" x2="29" y2="29" stroke="#5b6372" stroke-width="2"/>
-              <text x="17" y="62" text-anchor="middle" font-size="9" fill="#7a8294" font-family="Inter, sans-serif">RJ45</text>
             </g>
           </defs>
         </svg>

@@ -113,8 +113,8 @@
       <h1 class="font-heading font-extrabold text-3xl lg:text-4xl text-white mt-4">Соберите кабель под себя</h1>
 
       <div class="bg-panel border border-line rounded-3xl p-4 sm:p-6 mt-6">
-        <div class="rounded-2xl px-3 py-6 sm:py-8" style="background:linear-gradient(180deg,#2a3140,#1b202b);">
-          <svg viewBox="0 0 400 96" class="w-full" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Превью вашего кабеля">
+        <div class="rounded-2xl px-2 sm:px-3 py-5 sm:py-7" style="background:linear-gradient(180deg,#2a3140,#1b202b);">
+          <svg viewBox="0 12 400 72" class="w-full" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Превью вашего кабеля">
             <defs>
               <linearGradient id="cb_mtl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4f6f9"/><stop offset=".5" stop-color="#aab1bd"/><stop offset="1" stop-color="#6d7582"/></linearGradient>
               <linearGradient id="cb_gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe9a3"/><stop offset=".5" stop-color="#e2b84a"/><stop offset="1" stop-color="#8a6a1e"/></linearGradient>
@@ -288,7 +288,7 @@
         <div class="flex flex-wrap gap-2 mb-4">
           <template x-for="p in presets" :key="p.name">
             <button type="button" @click="colors = [...p.colors]" class="inline-flex items-center gap-2 border border-line bg-panel rounded-full pl-2 pr-3.5 py-1.5 text-sm text-gray-300 hover:border-gray-500 hover:text-white transition-colors">
-              <span class="flex -space-x-1"><template x-for="(c, j) in p.colors" :key="j"><span class="w-3.5 h-3.5 rounded-full border border-ink" :style="'background:' + c"></span></template></span>
+              <span class="flex -space-x-1"><template x-for="(c, j) in p.colors" :key="j"><span class="w-3.5 h-3.5 rounded-full border border-white/30" :style="'background:' + c"></span></template></span>
               <span x-text="p.name"></span>
             </button>
           </template>
@@ -358,10 +358,10 @@
   <!-- Мобильная панель: превью, цена и заказ всегда под рукой, пока листаете параметры -->
   <div class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-panel/95 backdrop-blur border-t border-line px-4 py-2.5 flex items-center gap-3" style="padding-bottom:calc(.625rem + env(safe-area-inset-bottom));">
     <div class="rounded-xl px-1.5 py-1 shrink-0" style="background:linear-gradient(180deg,#2a3140,#1b202b);">
-      <svg viewBox="96 26 208 44" class="block" width="118" height="25" aria-hidden="true"><use href="#cable-live"/></svg>
+      <svg viewBox="96 26 208 44" class="block" width="96" height="20" aria-hidden="true"><use href="#cable-live"/></svg>
     </div>
     <div class="leading-tight">
-      <div class="text-[11px] text-gray-500" x-text="typeLabel + ' · ' + length.toFixed(1) + ' м'"></div>
+      <div class="text-[11px] text-gray-500 whitespace-nowrap" x-text="typeLabel + ' · ' + length.toFixed(1) + ' м'"></div>
       <div class="font-heading font-bold text-white" x-text="price + ' ₴'"></div>
     </div>
     <a :href="orderLink" class="ml-auto inline-flex items-center gap-2 bg-cyan text-ink font-bold px-5 py-2.5 rounded-full">Заказать</a>

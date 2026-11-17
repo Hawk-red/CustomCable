@@ -99,14 +99,24 @@
             <rect x="4" y="68" width="34" height="24" rx="6" fill="#181c25" stroke="#3a4155" stroke-width="2"/>
           </g>
           <!-- braid strands -->
-          <template x-for="(c, i) in colors" :key="i">
-            <path class="braid-strand"
-                  d="M38 80 C 110 40, 150 120, 210 80 S 320 40, 362 80"
-                  :style="'transform: translateY(' + (i-1)*14 + 'px)'"
-                  fill="none" stroke-width="7" stroke-linecap="round"
-                  stroke-dasharray="16 10"
-                  :stroke="c"/>
-          </template>
+          <path class="braid-strand" x-show="colors.length > 0"
+                d="M38 80 C 110 40, 150 120, 210 80 S 320 40, 362 80"
+                style="transform: translateY(-14px)"
+                fill="none" stroke-width="7" stroke-linecap="round"
+                stroke-dasharray="16 10"
+                :stroke="colors[0]"/>
+          <path class="braid-strand" x-show="colors.length > 1"
+                d="M38 80 C 110 40, 150 120, 210 80 S 320 40, 362 80"
+                style="transform: translateY(0px)"
+                fill="none" stroke-width="7" stroke-linecap="round"
+                stroke-dasharray="16 10"
+                :stroke="colors[1]"/>
+          <path class="braid-strand" x-show="colors.length > 2"
+                d="M38 80 C 110 40, 150 120, 210 80 S 320 40, 362 80"
+                style="transform: translateY(14px)"
+                fill="none" stroke-width="7" stroke-linecap="round"
+                stroke-dasharray="16 10"
+                :stroke="colors[2]"/>
           <!-- connector right -->
           <g>
             <rect x="362" y="68" width="34" height="24" rx="6" fill="#181c25" stroke="#3a4155" stroke-width="2"/>

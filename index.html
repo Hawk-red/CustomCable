@@ -1,672 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>CustomCable</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>CustomCable — Кастомные кабели под ваш цвет, длину и задачу</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CustomCable — кастомные плетёные кабели ручной работы: аудио, USB-C, Lightning, сетевые. Выбирайте цвет оплётки, длину и разъёмы в конструкторе." />
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="assets/img/favicon.ico"
-    />
+  <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/templatemo.css" />
-    <link rel="stylesheet" href="assets/css/custom.css" />
+  <meta property="og:title" content="CustomCable — кастомные кабели">
+  <meta property="og:description" content="Плетёные кабели ручной работы под ваш цвет, длину и разъёмы. Конструктор кабеля онлайн.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Load fonts style after rendering the layout styles -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
-    />
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
-    <!--
-    
-TemplateMo 559 Zay Shop
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-https://templatemo.com/tm-559-zay-shop
-
--->
-  </head>
-
-  <body>
-    <!-- Start Top Nav -->
-    <nav
-      class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block"
-      id="templatemo_nav_top"
-    >
-      <div class="container text-light">
-        <div class="w-100 d-flex justify-content-between">
-          <div>
-            <i class="fa fa-envelope mx-2"></i>
-            <a
-              class="navbar-sm-brand text-light text-decoration-none"
-              href="mailto:customcableua@gmail.com"
-              >customcableua@gmail.com</a
-            >
-            <i class="fa fa-phone mx-2"></i>
-            <a
-              class="navbar-sm-brand text-light text-decoration-none"
-              href="tel:+380937860850"
-              >093 786 08 50</a
-            >
-          </div>
-          <div>
-            <a
-              class="text-light"
-              href="https://www.facebook.com/customcable.com.ua"
-              target="_blank"
-              rel="nofollow"
-              ><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i
-            ></a>
-            <a
-              class="text-light"
-              href="https://www.instagram.com/customcable.com.ua"
-              target="_blank"
-              ><i class="fab fa-instagram fa-sm fa-fw me-2"></i
-            ></a>
-            <a class="text-light" href="https://twitter.com/" target="_blank"
-              ><i class="fab fa-twitter fa-sm fa-fw me-2"></i
-            ></a>
-            <!-- <a
-              class="text-light"
-              href="https://www.linkedin.com/"
-              target="_blank"
-              ><i class="fab fa-linkedin fa-sm fa-fw"></i
-            ></a> -->
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Close Top Nav -->
-
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
-      <div class="container d-flex justify-content-between align-items-center">
-        <!-- <a
-          class="navbar-brand text-success logo h1 align-self-center"
-          href="index.html"
-        >
-          Custom Cable
-        </a> -->
-        <a
-          class="navbar-brand text-success logo h1 align-self-center"
-          href="index.html"
-          style="letter-spacing: -6px"
-        >
-          <span id="char1">C</span>
-          <span id="char2">u</span>
-          <span id="char3">s</span>
-          <span id="char4">t</span>
-          <span id="char5">o</span>
-          <span id="char6">m</span>
-          <span style="color: pink">&nbsp;</span>
-          <span id="char7">C</span>
-          <span id="char8">a</span>
-          <span id="char9">b</span>
-          <span id="char10">l</span>
-          <span id="char11">e</span>
-        </a>
-
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#templatemo_main_nav"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div
-          class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
-          id="templatemo_main_nav"
-        >
-          <div class="flex-fill">
-            <ul
-              class="nav navbar-nav d-flex justify-content-between mx-lg-auto"
-            >
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="shop.html">Shop</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="navbar align-self-center d-flex">
-            <div
-              class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3"
-            >
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputMobileSearch"
-                  placeholder="Search ..."
-                />
-                <div class="input-group-text">
-                  <i class="fa fa-fw fa-search"></i>
-                </div>
-              </div>
-            </div>
-            <a
-              class="nav-icon d-none d-lg-inline"
-              href="#"
-              data-bs-toggle="modal"
-              data-bs-target="#templatemo_search"
-            >
-              <i class="fa fa-fw fa-search text-dark mr-2"></i>
-            </a>
-            <a class="nav-icon position-relative text-decoration-none" href="#">
-              <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-              <span
-                class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
-              >
-                <!-- +99 Nubmber Under User Icon  -->
-              </span>
-            </a>
-            <a class="nav-icon position-relative text-decoration-none" href="#">
-              <i class="fa fa-fw fa-user text-dark mr-3"></i>
-              <span
-                class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
-              >
-                <!-- +99 Nubmber Under User Icon  -->
-              </span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <!-- Close Header -->
-
-    <!-- Modal -->
-    <div
-      class="modal fade bg-white"
-      id="templatemo_search"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="w-100 pt-1 mb-5 text-right">
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <form
-          action=""
-          method="get"
-          class="modal-content modal-body border-0 p-0"
-        >
-          <div class="input-group mb-2">
-            <input
-              type="text"
-              class="form-control"
-              id="inputModalSearch"
-              name="q"
-              placeholder="Поиск ..."
-            />
-            <button
-              type="submit"
-              class="input-group-text bg-success text-light"
-            >
-              <i class="fa fa-fw fa-search text-white"></i>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Start Banner Hero -->
-    <div
-      id="template-mo-zay-hero-carousel"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <ol class="carousel-indicators">
-        <li
-          data-bs-target="#template-mo-zay-hero-carousel"
-          data-bs-slide-to="0"
-          class="active"
-        ></li>
-        <li
-          data-bs-target="#template-mo-zay-hero-carousel"
-          data-bs-slide-to="1"
-        ></li>
-        <li
-          data-bs-target="#template-mo-zay-hero-carousel"
-          data-bs-slide-to="2"
-        ></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="row p-5">
-              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img
-                  class="img-fluid"
-                  src="https://res.cloudinary.com/dgesovnb4/image/upload/c_scale,q_100,r_30,w_800/v1693718022/Custom%20Cable/WebSite/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-09-03_%D0%B2_08.13.08_ktr4kf.png"
-                  alt=""
-                />
-              </div>
-              <div class="col-lg-6 mb-0 d-flex align-items-center">
-                <div class="text-align-left align-self-center">
-                  <h1 class="h1 text-success">
-                    <b>Кабеля</b>
-                  </h1>
-                  <h2>Премиум сегмента</h2>
-                  <h3 class="h2">Вам нужно выбрать цвет и длину</h3>
-                  <p>
-                    Мы изготавливаем кабели для аудио, видео, сетевых
-                    соединений, электроники и многих других областей
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row p-5">
-              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img
-                  class="img-fluid"
-                  src="https://res.cloudinary.com/dgesovnb4/image/upload/v1693718481/Custom%20Cable/WebSite/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-09-03_%D0%B2_08.20.53_n5ygym.png"
-                  alt=""
-                />
-              </div>
-              <div class="col-lg-6 mb-0 d-flex align-items-center">
-                <div class="text-align-left">
-                  <h1 class="h1 text-success"><b>Кабеля</b></h1>
-                  <h3 class="h2">Премиум сегмента</h3>
-                  <p>
-                    Мы создаем кабели, которые соответствуют вашим уникальным
-                    потребностям. Нам важно узнать, что именно вам нужно, и
-                    предоставить
-                    <strong>наилучшее решение</strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row p-5">
-              <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                <img
-                  class="img-fluid"
-                  src="https://res.cloudinary.com/dgesovnb4/image/upload/v1693718614/Custom%20Cable/WebSite/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-09-03_%D0%B2_08.23.23_drb7jq.png"
-                  alt=""
-                />
-              </div>
-              <div class="col-lg-6 mb-0 d-flex align-items-center">
-                <div class="text-align-left">
-                  <h1 class="h1 text-success"><b>Кабеля</b></h1>
-                  <h3 class="h2">Профессиональное Качество</h3>
-                  <p>
-                    Наши кабели проходят строгий контроль качества, чтобы
-                    обеспечить надежность и долгий срок службы.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a
-        class="carousel-control-prev text-decoration-none w-auto ps-3"
-        href="#template-mo-zay-hero-carousel"
-        role="button"
-        data-bs-slide="prev"
-      >
-        <i class="fas fa-chevron-left"></i>
-      </a>
-      <a
-        class="carousel-control-next text-decoration-none w-auto pe-3"
-        href="#template-mo-zay-hero-carousel"
-        role="button"
-        data-bs-slide="next"
-      >
-        <i class="fas fa-chevron-right"></i>
-      </a>
-    </div>
-    <!-- End Banner Hero -->
-
-    <!-- Start Categories of The Month -->
-    <section class="container py-5">
-      <div class="row text-center pt-3">
-        <div class="col-lg-6 m-auto">
-          <h1 class="h1">Популярные модели</h1>
-          <p>Самые продаваемые модели за 2023 год</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#"
-            ><img
-              src="./assets/img/category_img_01.jpg"
-              class="rounded-circle img-fluid border"
-          /></a>
-          <h5 class="text-center mt-3 mb-3">Желто Голубой</h5>
-          <p class="text-center"><a class="btn btn-success" href="shop.html">Заказать</a></p>
-        </div>
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#"
-            ><img
-              src="./assets/img/category_img_02.jpg"
-              class="rounded-circle img-fluid border"
-          /></a>
-          <h2 class="h5 text-center mt-3 mb-3">Динамо Киев</h2>
-          <p class="text-center"><a class="btn btn-success" href="shop.html">Заказать</a></p>
-        </div>
-        <div class="col-12 col-md-4 p-5 mt-3">
-          <a href="#"
-            ><img
-              src="./assets/img/category_img_03.jpg"
-              class="rounded-circle img-fluid border"
-          /></a>
-          <h2 class="h5 text-center mt-3 mb-3">Вышиванка</h2>
-          <p class="text-center"><a class="btn btn-success" href="shop.html">Заказать</a></p>
-        </div>
-      </div>
-    </section>
-    <!-- End Categories of The Month -->
-
-    <!-- Start Featured Product -->
-    <section class="bg-light">
-      <div class="container py-5">
-        <div class="row text-center py-3">
-          <div class="col-lg-6 m-auto">
-            <h1 class="h1">Популярные товары</h1>
-            <p>
-              Наши кабели изготавливаются вручную с использованием
-              высококачественных материалов премиум класса.
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card h-100">
-              <a href="shop-single.html">
-                <img
-                  src="./assets/img/feature_prod_01.jpg"
-                  class="card-img-top"
-                  alt="Аудио кабель Custom Cable"
-                />
-              </a>
-              <div class="card-body">
-                <ul class="list-unstyled d-flex justify-content-between">
-                  <li>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-muted fa fa-star"></i>
-                  </li>
-                  <li class="text-muted text-right">від 450 грн</li>
-                </ul>
-                <a
-                  href="shop-single.html"
-                  class="h2 text-decoration-none text-dark"
-                  >Аудіо кабель 3.5mm</a
-                >
-                <p class="card-text">
-                  Кабель для навушників з підсиленим захистом від перегинів та
-                  кольоровим нейлоновим обплетенням на вибір.
-                </p>
-                <p class="text-muted">Відгуки (24)</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card h-100">
-              <a href="shop-single.html">
-                <img
-                  src="./assets/img/feature_prod_02.jpg"
-                  class="card-img-top"
-                  alt="USB кабель Custom Cable"
-                />
-              </a>
-              <div class="card-body">
-                <ul class="list-unstyled d-flex justify-content-between">
-                  <li>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                  </li>
-                  <li class="text-muted text-right">від 350 грн</li>
-                </ul>
-                <a
-                  href="shop-single.html"
-                  class="h2 text-decoration-none text-dark"
-                  >USB-C кабель</a
-                >
-                <p class="card-text">
-                  Зарядний кабель USB-C із швидкою зарядкою до 100W та
-                  кастомним обплетенням будь-якого кольору.
-                </p>
-                <p class="text-muted">Відгуки (48)</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-4 mb-4">
-            <div class="card h-100">
-              <a href="shop-single.html">
-                <img
-                  src="./assets/img/feature_prod_03.jpg"
-                  class="card-img-top"
-                  alt="Мережевий кабель Custom Cable"
-                />
-              </a>
-              <div class="card-body">
-                <ul class="list-unstyled d-flex justify-content-between">
-                  <li>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                    <i class="text-warning fa fa-star"></i>
-                  </li>
-                  <li class="text-muted text-right">від 280 грн</li>
-                </ul>
-                <a
-                  href="shop-single.html"
-                  class="h2 text-decoration-none text-dark"
-                  >Мережевий кабель RJ45</a
-                >
-                <p class="card-text">
-                  Патч-корд категорії Cat6 будь-якої довжини з кастомним
-                  обплетенням та кольоровими конекторами.
-                </p>
-                <p class="text-muted">Відгуки (74)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Featured Product -->
-
-    <!-- Start Footer -->
-    <footer class="bg-dark" id="tempaltemo_footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 pt-5">
-            <h2 class="h2 text-success border-bottom pb-3 border-light logo">
-              Custom Cable
-            </h2>
-            <ul class="list-unstyled text-light footer-link-list">
-              <li>
-                <i class="fas fa-map-marker-alt fa-fw"></i>
-                Kiev , Ukraine
-              </li>
-              <li>
-                <i class="fa fa-phone fa-fw"></i>
-                <a class="text-decoration-none" href="tel:+380937860850"
-                  >093 786 08 50</a
-                >
-              </li>
-              <li>
-                <i class="fa fa-envelope fa-fw"></i>
-                <a
-                  class="text-decoration-none"
-                  href="mailto:customcableua@gmail.com"
-                  >customcableua@gmail.com</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="col-md-4 pt-5">
-            <h2 class="h2 text-light border-bottom pb-3 border-light">
-              Продукти
-            </h2>
-            <ul class="list-unstyled text-light footer-link-list">
-              <li><a class="text-decoration-none" href="shop.html">Аудіо кабелі</a></li>
-              <li><a class="text-decoration-none" href="shop.html">USB кабелі</a></li>
-              <li><a class="text-decoration-none" href="shop.html">Мережеві кабелі</a></li>
-              <li><a class="text-decoration-none" href="shop.html">Відео кабелі</a></li>
-              <li><a class="text-decoration-none" href="shop.html">Кабелі для клавіатур</a></li>
-              <li><a class="text-decoration-none" href="shop.html">Аксесуари</a></li>
-            </ul>
-          </div>
-
-          <div class="col-md-4 pt-5">
-            <h2 class="h2 text-light border-bottom pb-3 border-light">
-              Further Info
-            </h2>
-            <ul class="list-unstyled text-light footer-link-list">
-              <li><a class="text-decoration-none" href="#">Home</a></li>
-              <li><a class="text-decoration-none" href="#">About Us</a></li>
-              <li>
-                <a class="text-decoration-none" href="#">Shop Locations</a>
-              </li>
-              <li><a class="text-decoration-none" href="#">FAQs</a></li>
-              <li><a class="text-decoration-none" href="#">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row text-light mb-4">
-          <div class="col-12 mb-3">
-            <div class="w-100 my-3 border-top border-light"></div>
-          </div>
-          <div class="col-auto me-auto">
-            <ul class="list-inline text-left footer-icons">
-              <li
-                class="list-inline-item border border-light rounded-circle text-center"
-              >
-                <a
-                  class="text-light text-decoration-none"
-                  target="_blank"
-                  href="https://www.facebook.com/customcable.com.ua"
-                  ><i class="fab fa-facebook-f fa-lg fa-fw"></i
-                ></a>
-              </li>
-              <li
-                class="list-inline-item border border-light rounded-circle text-center"
-              >
-                <a
-                  class="text-light text-decoration-none"
-                  target="_blank"
-                  href="https://www.instagram.com/customcable.com.ua"
-                  ><i class="fab fa-instagram fa-lg fa-fw"></i
-                ></a>
-              </li>
-              <li
-                class="list-inline-item border border-light rounded-circle text-center"
-              >
-                <a
-                  class="text-light text-decoration-none"
-                  target="_blank"
-                  href="https://twitter.com/"
-                  ><i class="fab fa-twitter fa-lg fa-fw"></i
-                ></a>
-              </li>
-              <li
-                class="list-inline-item border border-light rounded-circle text-center"
-              >
-                <a
-                  class="text-light text-decoration-none"
-                  target="_blank"
-                  href="https://www.linkedin.com/"
-                  ><i class="fab fa-linkedin fa-lg fa-fw"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-          <!-- <div class="col-auto"> 
-            <label class="sr-only" for="subscribeEmail">Email address</label>
-            <div class="input-group mb-2">
-              <input
-                type="text"
-                class="form-control bg-dark border-light"
-                id="subscribeEmail"
-                placeholder="Email address"
-              />
-              <div class="input-group-text btn-success text-light">
-                Subscribe
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </div>
-
-      <div class="w-100 bg-black py-3">
-        <div class="container">
-          <div class="row pt-2">
-            <div class="col-12">
-              <p class="text-left text-light">
-                Copyright &copy; 2024 CustomCable | Designed by Hawk
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-
-    <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <!-- End Script -->
-    <script>
-      // Функция для генерации случайного цвета
-      function getRandomColor() {
-        var letters = "0123456789ABCDEF";
-        var color = "#";
-        for (var i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0b0d12',
+            panel: '#12151c',
+            panel2: '#181c25',
+            line: '#272c38',
+            cyan: '#22d3ee',
+            magenta: '#f472b6',
+            amber: '#fbbf24',
+            lime: '#a3e635',
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
         }
-        return color;
       }
+    }
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
 
-      // Присваиваем случайные цвета каждой букве при загрузке страницы
-      for (var i = 1; i <= 11; i++) {
-        var char = document.getElementById("char" + i);
-        char.style.color = getRandomColor();
-      }
-    </script>
-  </body>
+  <style>
+    * { box-sizing: border-box; }
+    html,body{overflow-x:hidden;background:#0b0d12;color:#e7e9ee;scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;}
+    h1,h2,h3,h4,h5,h6,.font-heading{font-family:'Space Grotesk',sans-serif;}
+
+    .grad-text{
+      background:linear-gradient(90deg,#22d3ee,#f472b6 45%,#fbbf24 85%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+
+    /* Woven cable motif */
+    .weave-wrap{position:relative;overflow:hidden;}
+    .weave-line{animation:weaveFlow 10s linear infinite;}
+    @keyframes weaveFlow{
+      0%{stroke-dashoffset:0;}
+      100%{stroke-dashoffset:-240;}
+    }
+    @media (prefers-reduced-motion: reduce){.weave-line{animation:none;}}
+
+    .card-hover{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+    .card-hover:hover{transform:translateY(-6px);border-color:#3a4155;box-shadow:0 20px 50px rgba(0,0,0,.45);}
+
+    .dot{width:14px;height:14px;border-radius:999px;display:inline-block;}
+  </style>
+</head>
+<body class="bg-ink">
+
+  <!-- Top bar -->
+  <div class="hidden lg:block border-b border-line/60">
+    <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm text-gray-400">
+      <div class="flex items-center gap-6">
+        <a href="mailto:customcableua@gmail.com" class="hover:text-white transition-colors"><i class="fa fa-envelope mr-2"></i>customcableua@gmail.com</a>
+        <a href="tel:+380937860850" class="hover:text-white transition-colors"><i class="fa fa-phone mr-2"></i>093 786 08 50</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://www.facebook.com/customcable.com.ua" target="_blank" rel="nofollow" class="hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/customcable.com.ua" target="_blank" class="hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header x-data="{ mobileOpen:false }" class="sticky top-0 z-50 bg-ink/90 backdrop-blur border-b border-line/60">
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 17c3-7 7-7 10 0s7 7 10 0 7-7 8-4" stroke="url(#navGrad)" stroke-width="3" stroke-linecap="round"/>
+          <defs><linearGradient id="navGrad" x1="0" y1="0" x2="34" y2="0"><stop stop-color="#22d3ee"/><stop offset="0.5" stop-color="#f472b6"/><stop offset="1" stop-color="#fbbf24"/></linearGradient></defs>
+        </svg>
+        <span class="font-heading font-bold text-xl text-white">Custom<span class="grad-text">Cable</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-10 font-medium text-gray-300">
+        <a href="index.html" class="text-white border-b-2 border-cyan pb-1">Главная</a>
+        <a href="shop.html" class="hover:text-white transition-colors">Каталог</a>
+        <a href="shop-single.html" class="hover:text-white transition-colors">Конструктор</a>
+        <a href="about.html" class="hover:text-white transition-colors">О нас</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Контакты</a>
+      </div>
+      <a href="shop-single.html" class="hidden lg:inline-flex items-center gap-2 bg-gradient-to-r from-cyan via-magenta to-amber text-ink font-bold px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity">
+        Собрать кабель <i class="fa fa-arrow-right text-xs"></i>
+      </a>
+      <button @click="mobileOpen=!mobileOpen" class="lg:hidden text-white p-2" aria-label="Меню">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </nav>
+    <div x-show="mobileOpen" x-transition class="lg:hidden border-t border-line/60 px-6 py-4 flex flex-col gap-3 bg-panel">
+      <a href="index.html" class="text-white py-1.5">Главная</a>
+      <a href="shop.html" class="text-gray-300 py-1.5">Каталог</a>
+      <a href="shop-single.html" class="text-gray-300 py-1.5">Конструктор</a>
+      <a href="about.html" class="text-gray-300 py-1.5">О нас</a>
+      <a href="contact.html" class="text-gray-300 py-1.5">Контакты</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative weave-wrap border-b border-line/60">
+    <svg class="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 1440 700" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path class="weave-line" d="M-100 180 C 150 60, 350 300, 600 180 S 1050 60, 1300 180 S 1600 300, 1800 180"
+            stroke="#22d3ee" stroke-width="3" fill="none" stroke-dasharray="14 10" opacity="0.55"/>
+      <path class="weave-line" d="M-100 260 C 150 380, 350 140, 600 260 S 1050 380, 1300 260 S 1600 140, 1800 260"
+            stroke="#f472b6" stroke-width="3" fill="none" stroke-dasharray="14 10" opacity="0.5" style="animation-delay:-3s"/>
+      <path class="weave-line" d="M-100 500 C 150 420, 350 600, 600 500 S 1050 420, 1300 500 S 1600 600, 1800 500"
+            stroke="#fbbf24" stroke-width="2.5" fill="none" stroke-dasharray="10 12" opacity="0.4" style="animation-delay:-6s"/>
+    </svg>
+
+    <div class="relative max-w-7xl mx-auto px-6 pt-16 pb-24 lg:pt-24 lg:pb-32 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 text-xs font-semibold tracking-wide uppercase bg-panel border border-line text-gray-300 px-3 py-1.5 rounded-full">
+          <span class="dot bg-cyan" style="width:8px;height:8px;"></span> Ручная работа · Киев
+        </span>
+        <h1 class="font-heading font-extrabold text-5xl lg:text-6xl text-white mt-6 leading-[1.05]">
+          Кабель,<br/>который <span class="grad-text">собрали под вас</span>
+        </h1>
+        <p class="text-gray-400 text-lg mt-6 max-w-lg">
+          Любой цвет оплётки, любая длина, любые разъёмы. Аудио, USB‑C, Lightning, сетевые —
+          вы выбираете, мы плетём вручную.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-8">
+          <a href="shop-single.html" class="bg-gradient-to-r from-cyan via-magenta to-amber text-ink font-bold px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-magenta/10">
+            Открыть конструктор
+          </a>
+          <a href="shop.html" class="border border-line text-white font-semibold px-7 py-3.5 rounded-full hover:border-gray-400 transition-colors">
+            Смотреть каталог
+          </a>
+        </div>
+        <div class="flex items-center gap-6 mt-10 text-sm text-gray-400">
+          <div class="flex items-center gap-2"><i class="fa fa-palette text-cyan"></i> Любой цвет</div>
+          <div class="flex items-center gap-2"><i class="fa fa-ruler text-magenta"></i> Любая длина</div>
+          <div class="flex items-center gap-2"><i class="fa fa-plug text-amber"></i> Любой разъём</div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-6 bg-gradient-to-br from-cyan/20 via-magenta/10 to-amber/20 blur-3xl rounded-full"></div>
+        <img src="https://res.cloudinary.com/dgesovnb4/image/upload/c_scale,q_100,r_30,w_800/v1693718022/Custom%20Cable/WebSite/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-09-03_%D0%B2_08.13.08_ktr4kf.png"
+             alt="Плетёный кастомный кабель CustomCable" class="relative rounded-3xl w-full max-w-md mx-auto drop-shadow-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
+      <div>
+        <h2 class="font-heading font-bold text-3xl text-white">Что мы плетём</h2>
+        <p class="text-gray-400 mt-2">Четыре основных типа — каждый кастомизируется полностью</p>
+      </div>
+      <a href="shop.html" class="text-cyan font-semibold hover:text-white transition-colors">Весь каталог →</a>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="shop-single.html?type=audio" class="card-hover bg-panel border border-line rounded-2xl p-6 block">
+        <svg viewBox="0 0 64 32" class="w-full h-16 mb-4"><path d="M2 16 Q 12 2, 22 16 T 42 16 T 62 16" stroke="#22d3ee" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="2" cy="16" r="3" fill="#22d3ee"/><circle cx="62" cy="16" r="3" fill="#22d3ee"/></svg>
+        <h3 class="font-heading font-bold text-white text-lg">Аудио 3.5мм</h3>
+        <p class="text-gray-400 text-sm mt-1">Для наушников и колонок</p>
+        <p class="text-cyan font-semibold mt-3">від 450 ₴</p>
+      </a>
+      <a href="shop-single.html?type=usbc" class="card-hover bg-panel border border-line rounded-2xl p-6 block">
+        <svg viewBox="0 0 64 32" class="w-full h-16 mb-4"><path d="M2 16 Q 12 30, 22 16 T 42 16 T 62 16" stroke="#f472b6" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="2" cy="16" r="3" fill="#f472b6"/><circle cx="62" cy="16" r="3" fill="#f472b6"/></svg>
+        <h3 class="font-heading font-bold text-white text-lg">USB‑C, до 100Вт</h3>
+        <p class="text-gray-400 text-sm mt-1">Быстрая зарядка</p>
+        <p class="text-magenta font-semibold mt-3">від 350 ₴</p>
+      </a>
+      <a href="shop-single.html?type=lightning" class="card-hover bg-panel border border-line rounded-2xl p-6 block">
+        <svg viewBox="0 0 64 32" class="w-full h-16 mb-4"><path d="M2 16 Q 12 2, 22 16 T 42 16 T 62 16" stroke="#fbbf24" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="2" cy="16" r="3" fill="#fbbf24"/><circle cx="62" cy="16" r="3" fill="#fbbf24"/></svg>
+        <h3 class="font-heading font-bold text-white text-lg">Lightning</h3>
+        <p class="text-gray-400 text-sm mt-1">Для iPhone и аксессуаров</p>
+        <p class="text-amber font-semibold mt-3">від 420 ₴</p>
+      </a>
+      <a href="shop-single.html?type=network" class="card-hover bg-panel border border-line rounded-2xl p-6 block">
+        <svg viewBox="0 0 64 32" class="w-full h-16 mb-4"><path d="M2 16 Q 12 30, 22 16 T 42 16 T 62 16" stroke="#a3e635" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="2" cy="16" r="3" fill="#a3e635"/><circle cx="62" cy="16" r="3" fill="#a3e635"/></svg>
+        <h3 class="font-heading font-bold text-white text-lg">Cat6 сетевой</h3>
+        <p class="text-gray-400 text-sm mt-1">Плетёный патч‑корд RJ45</p>
+        <p class="text-lime font-semibold mt-3">від 280 ₴</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Constructor teaser -->
+  <section class="border-y border-line/60 bg-panel/40">
+    <div class="max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h2 class="font-heading font-bold text-3xl lg:text-4xl text-white">
+          Соберите свой кабель<br/>в <span class="grad-text">конструкторе</span>
+        </h2>
+        <p class="text-gray-400 mt-4 max-w-lg">
+          Выбирайте тип разъёмов, длину и до трёх цветов оплётки — предпросмотр
+          обновляется вживую, а цена считается сразу.
+        </p>
+        <ul class="mt-6 space-y-3 text-gray-300">
+          <li class="flex items-center gap-3"><i class="fa fa-check-circle text-cyan"></i> Живой превью плетения</li>
+          <li class="flex items-center gap-3"><i class="fa fa-check-circle text-magenta"></i> Любая длина от 0.3 до 3 м</li>
+          <li class="flex items-center gap-3"><i class="fa fa-check-circle text-amber"></i> До 3 цветов в оплётке</li>
+        </ul>
+        <a href="shop-single.html" class="inline-flex mt-8 bg-gradient-to-r from-cyan via-magenta to-amber text-ink font-bold px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity">
+          Перейти к конструктору
+        </a>
+      </div>
+      <div class="bg-panel border border-line rounded-3xl p-6">
+        <svg viewBox="0 0 400 180" class="w-full">
+          <path d="M10 90 C 80 20, 140 160, 210 90 S 320 20, 390 90" stroke="#22d3ee" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M10 90 C 80 160, 140 20, 210 90 S 320 160, 390 90" stroke="#f472b6" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.85"/>
+          <path d="M10 90 C 80 60, 140 120, 210 90 S 320 60, 390 90" stroke="#fbbf24" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <circle cx="10" cy="90" r="9" fill="#181c25" stroke="#3a4155" stroke-width="2"/>
+          <circle cx="390" cy="90" r="9" fill="#181c25" stroke="#3a4155" stroke-width="2"/>
+        </svg>
+        <div class="grid grid-cols-3 gap-3 mt-4 text-center text-sm text-gray-400">
+          <div class="bg-panel2 rounded-xl py-3">Тип: <span class="text-white font-semibold">USB‑C</span></div>
+          <div class="bg-panel2 rounded-xl py-3">Длина: <span class="text-white font-semibold">1.2 м</span></div>
+          <div class="bg-panel2 rounded-xl py-3">Цена: <span class="text-cyan font-semibold">490 ₴</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust -->
+  <section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
+    <div class="text-center">
+      <div class="w-14 h-14 rounded-2xl bg-panel border border-line flex items-center justify-center mx-auto text-cyan text-xl"><i class="fa fa-hand-sparkles"></i></div>
+      <h3 class="font-heading font-bold text-white mt-4">Ручное плетение</h3>
+      <p class="text-gray-400 text-sm mt-2">Каждый кабель плетётся вручную, а не штампуется на конвейере</p>
+    </div>
+    <div class="text-center">
+      <div class="w-14 h-14 rounded-2xl bg-panel border border-line flex items-center justify-center mx-auto text-magenta text-xl"><i class="fa fa-shield-halved"></i></div>
+      <h3 class="font-heading font-bold text-white mt-4">Проверенные материалы</h3>
+      <p class="text-gray-400 text-sm mt-2">Армированная оплётка и разъёмы с контролем качества на каждом кабеле</p>
+    </div>
+    <div class="text-center">
+      <div class="w-14 h-14 rounded-2xl bg-panel border border-line flex items-center justify-center mx-auto text-amber text-xl"><i class="fa fa-sliders"></i></div>
+      <h3 class="font-heading font-bold text-white mt-4">Полный кастом</h3>
+      <p class="text-gray-400 text-sm mt-2">Цвет, длина и разъёмы — под вашу задачу, а не "один размер для всех"</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-7xl mx-auto px-6 pb-24">
+    <div class="rounded-3xl border border-line bg-gradient-to-br from-panel to-panel2 p-10 lg:p-14 text-center relative overflow-hidden">
+      <h2 class="font-heading font-bold text-3xl lg:text-4xl text-white relative">Готовы собрать свой кабель?</h2>
+      <p class="text-gray-400 mt-3 relative">Напишите нам или откройте конструктор — ответим в течение дня</p>
+      <div class="flex flex-wrap justify-center gap-4 mt-8 relative">
+        <a href="shop-single.html" class="bg-gradient-to-r from-cyan via-magenta to-amber text-ink font-bold px-7 py-3.5 rounded-full hover:opacity-90 transition-opacity">Открыть конструктор</a>
+        <a href="contact.html" class="border border-line text-white font-semibold px-7 py-3.5 rounded-full hover:border-gray-400 transition-colors">Связаться с нами</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-line/60 bg-panel">
+    <div class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-4 gap-10">
+      <div>
+        <div class="flex items-center gap-2 mb-3">
+          <svg width="26" height="26" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 17c3-7 7-7 10 0s7 7 10 0 7-7 8-4" stroke="url(#footGrad)" stroke-width="3" stroke-linecap="round"/>
+            <defs><linearGradient id="footGrad" x1="0" y1="0" x2="34" y2="0"><stop stop-color="#22d3ee"/><stop offset="0.5" stop-color="#f472b6"/><stop offset="1" stop-color="#fbbf24"/></linearGradient></defs>
+          </svg>
+          <span class="font-heading font-bold text-white">Custom<span class="grad-text">Cable</span></span>
+        </div>
+        <p class="text-gray-400 text-sm">Кастомные плетёные кабели ручной работы. Киев, Украина.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Навигация</h4>
+        <div class="flex flex-col gap-2 text-sm text-gray-400">
+          <a href="index.html" class="hover:text-white transition-colors">Главная</a>
+          <a href="shop.html" class="hover:text-white transition-colors">Каталог</a>
+          <a href="shop-single.html" class="hover:text-white transition-colors">Конструктор</a>
+          <a href="about.html" class="hover:text-white transition-colors">О нас</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Контакты</h4>
+        <div class="flex flex-col gap-2 text-sm text-gray-400">
+          <a href="mailto:customcableua@gmail.com" class="hover:text-white transition-colors">customcableua@gmail.com</a>
+          <a href="tel:+380937860850" class="hover:text-white transition-colors">093 786 08 50</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Мы в соцсетях</h4>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/customcable.com.ua" target="_blank" rel="nofollow" class="w-10 h-10 rounded-full bg-panel2 flex items-center justify-center text-gray-300 hover:text-white transition-colors"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/customcable.com.ua" target="_blank" class="w-10 h-10 rounded-full bg-panel2 flex items-center justify-center text-gray-300 hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-line/60 py-5 text-center text-gray-500 text-sm">
+      &copy; <span id="copy-year"></span> CustomCable. Все права защищены.
+    </div>
+  </footer>
+
+  <script>document.getElementById('copy-year').textContent = new Date().getFullYear();</script>
+</body>
 </html>
